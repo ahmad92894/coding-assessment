@@ -38,13 +38,18 @@ showQuestions();
 })
 function showQuestions() {
 questionElement.textContent=questions[questioncounter].questions
+button1.textContent=questions[questioncounter].choices[0]
+button2.textContent=questions[questioncounter].choices[1]
+button3.textContent=questions[questioncounter].choices[2]
+button4.textContent=questions[questioncounter].choices[3]
+questioncounter++
+// }
+// // if(questioncounter==questions.length){
+// //     showresults
+// // 
+
+
+// document.querySelector('#buttons').addEventListener('click',function (questionElement){
+    
+// })
 }
-
-
-
-
-
-
-
-
-
