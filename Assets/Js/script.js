@@ -67,51 +67,51 @@ button1.addEventListener("click", function(e){
     console.log(e.target.textContent)
 if(e.target.textContent==questions[0].answer ){
     score+=5;
-    correct.textContent="Correct!";
+    // correct.textContent="Correct!";
 }else{
     timer-=5;
-    correct.textContent="Nope";
+    // correct.textContent="Nope";
 }
  
- showQuestion()
+ showQuestions()
 }); 
 button2.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[1].answer ){
         score+=5;
-        correct.textContent="Correct!";
+        // correct.textContent="Correct!";
     }else{
         timer-=5;
-        correct.textContent="Nope";
+        // correct.textContent="Nope";
     }
      
-     showQuestion()
+     showQuestions()
    
 }); 
 button3.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[2].answer ){
         score+=5;
-        correct.textContent="Correct!";
+        // correct.textContent="Correct!";
     }else{
         timer-=5;
-        correct.textContent="Nope"
+        // correct.textContent="Nope"
     }
      
-     showQuestion()
+     showQuestions()
  
 }); 
 button4.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[3].answer ){
         score+=5;
-        correct.textContent="Correct!";
+        // correct.textContent="Correct!";
     }else{
         timer-=5;
-        correct.textContent="Nope"
+        // correct.textContent="Nope"
     }
      
-     showQuestion()
+     showQuestions()
  
 }); 
 

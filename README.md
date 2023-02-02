@@ -4,4 +4,5 @@ psudeo code done by TA
 Worked in 2 groups
 used previous classwork 
 saw tutor 
+met with about 3 BCS tutors
 ## CODED BY AHMAD BUSTAMI##
