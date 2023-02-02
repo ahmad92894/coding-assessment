@@ -6,3 +6,4 @@ used previous classwork
 saw tutor 
 met with about 3 BCS tutors
 ## CODED BY AHMAD BUSTAMI##
+img in files it wouldnt load here
