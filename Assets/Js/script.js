@@ -1,4 +1,4 @@
-var startbutton = document.querySelector(".start");
+var startbutton = document.getElementById("start");
 var timerElement = document.querySelector(".timer");
 var questionElement = document.querySelector(".questionElement");
 var questioncounter =0;
