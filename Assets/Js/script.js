@@ -11,6 +11,7 @@ var score=0
 var correct = document.querySelector("#Correct");
 
 
+
 var questions=[
 {
 questions:"what was the first language taught to us in class?",
@@ -35,24 +36,29 @@ answer:'4',
  },
 ];
 startbutton.addEventListener("click", function(){
-var timer = setInterval(function(){
+
+var timerInterval = setInterval(function(){
     timer--;
-    timerElement.textcontent = timer;
+    timerElement.textContent = timer;
     if (timer<=0){
-        clearInterval
+        clearInterval(timerInterval)
     }
 }, 1000);
 showQuestions();
 })
 function showQuestions() {
+    if(questioncounter<questions.length){
 questionElement.textContent=questions[questioncounter].questions
 button1.textContent=questions[questioncounter].choices[0]
 button2.textContent=questions[questioncounter].choices[1]
 button3.textContent=questions[questioncounter].choices[2]
 button4.textContent=questions[questioncounter].choices[3]
 questioncounter++
-// }
-// // if(questioncounter==questions.length){
+}
+else{
+    alert(score)
+}
+
 // //     showresults
 // // 
 
@@ -65,7 +71,7 @@ questioncounter++
 // event listener for each button and when the button is clicked
 button1.addEventListener("click", function(e){
     console.log(e.target.textContent)
-if(e.target.textContent==questions[0].answer ){
+if(e.target.textContent==questions[questioncounter-1].answer ){
     score+=5;
     // correct.textContent="Correct!";
 }else{
@@ -77,7 +83,7 @@ if(e.target.textContent==questions[0].answer ){
 }); 
 button2.addEventListener("click", function(e){
     console.log(e.target.textContent)
-    if(e.target.textContent==questions[1].answer ){
+    if(e.target.textContent==questions[questioncounter-1].answer ){
         score+=5;
         // correct.textContent="Correct!";
     }else{
@@ -90,7 +96,7 @@ button2.addEventListener("click", function(e){
 }); 
 button3.addEventListener("click", function(e){
     console.log(e.target.textContent)
-    if(e.target.textContent==questions[2].answer ){
+    if(e.target.textContent==questions[questioncounter-1].answer ){
         score+=5;
         // correct.textContent="Correct!";
     }else{
@@ -103,7 +109,7 @@ button3.addEventListener("click", function(e){
 }); 
 button4.addEventListener("click", function(e){
     console.log(e.target.textContent)
-    if(e.target.textContent==questions[3].answer ){
+    if(e.target.textContent==questions[questioncounter-1].answer ){
         score+=5;
         // correct.textContent="Correct!";
     }else{
@@ -112,6 +118,7 @@ button4.addEventListener("click", function(e){
     }
      
      showQuestions()
+     
  
 }); 
 
