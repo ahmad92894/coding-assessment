@@ -72,11 +72,11 @@ else{
 button1.addEventListener("click", function(e){
     console.log(e.target.textContent)
 if(e.target.textContent==questions[questioncounter-1].answer ){
-    score+=5;
-    // correct.textContent="Correct!";
+    score+=25;
+  
 }else{
-    timer-=5;
-    // correct.textContent="Nope";
+    timer-=15;
+    
 }
  
  showQuestions()
@@ -84,11 +84,11 @@ if(e.target.textContent==questions[questioncounter-1].answer ){
 button2.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[questioncounter-1].answer ){
-        score+=5;
-        // correct.textContent="Correct!";
+        score+=25;
+        
     }else{
-        timer-=5;
-        // correct.textContent="Nope";
+        timer-=15;
+        
     }
      
      showQuestions()
@@ -97,11 +97,11 @@ button2.addEventListener("click", function(e){
 button3.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[questioncounter-1].answer ){
-        score+=5;
-        // correct.textContent="Correct!";
+        score+=25;
+        
     }else{
-        timer-=5;
-        // correct.textContent="Nope"
+        timer-=15;
+        
     }
      
      showQuestions()
@@ -110,11 +110,11 @@ button3.addEventListener("click", function(e){
 button4.addEventListener("click", function(e){
     console.log(e.target.textContent)
     if(e.target.textContent==questions[questioncounter-1].answer ){
-        score+=5;
-        // correct.textContent="Correct!";
+        score+=25;
+        
     }else{
-        timer-=5;
-        // correct.textContent="Nope"
+        timer-=15;
+      
     }
      
      showQuestions()
