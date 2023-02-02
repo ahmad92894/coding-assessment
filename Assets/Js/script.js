@@ -1,27 +1,35 @@
 var startbutton = document.getElementById("start");
-var timerElement = document.querySelector(".timer");
+var timerElement = document.querySelector("#timer");
 var questionElement = document.querySelector(".questionElement");
 var questioncounter =0;
+var button1 = document.getElementById('answer1')
+var button2 = document.getElementById('answer2')
+var button3 = document.getElementById('answer3')
+var button4 = document.getElementById('answer4')
 var timer=100;
+var score=0
+var correct = document.querySelector("#Correct");
+
+
 var questions=[
 {
 questions:"what was the first language taught to us in class?",
 choices:['JS','HTML','CSS','NUL'],
-answer:'2',
+answer:'HTML',
 },
 {
 questions:"what was the first HW assignment?",
 choices:['webpage','porfolio','quiz','game'],
-answer:'1',
+answer:'webpage',
 },
 {
  questions:"what does html stand for",
 choices:['hot tomato must learn','healthy technology might last','hypertext markup language','home tile market list'],
-answer:'3',
+answer:'hypertext markup language',
 }, 
 
 {
-questions:"what number project is this",
+questions:"what number hw project is this",
 choices:['1','2','3','4'],
 answer:'4',
  },
@@ -29,7 +37,7 @@ answer:'4',
 startbutton.addEventListener("click", function(){
 var timer = setInterval(function(){
     timer--;
-    timerspan.textcontent = timer;
+    timerElement.textcontent = timer;
     if (timer<=0){
         clearInterval
     }
@@ -53,3 +61,57 @@ questioncounter++
     
 // })
 }
+
+// event listener for each button and when the button is clicked
+button1.addEventListener("click", function(e){
+    console.log(e.target.textContent)
+if(e.target.textContent==questions[0].answer ){
+    score+=5;
+    correct.textContent="Correct!";
+}else{
+    timer-=5;
+    correct.textContent="Nope";
+}
+ 
+ showQuestion()
+}); 
+button2.addEventListener("click", function(e){
+    console.log(e.target.textContent)
+    if(e.target.textContent==questions[1].answer ){
+        score+=5;
+        correct.textContent="Correct!";
+    }else{
+        timer-=5;
+        correct.textContent="Nope";
+    }
+     
+     showQuestion()
+   
+}); 
+button3.addEventListener("click", function(e){
+    console.log(e.target.textContent)
+    if(e.target.textContent==questions[2].answer ){
+        score+=5;
+        correct.textContent="Correct!";
+    }else{
+        timer-=5;
+        correct.textContent="Nope"
+    }
+     
+     showQuestion()
+ 
+}); 
+button4.addEventListener("click", function(e){
+    console.log(e.target.textContent)
+    if(e.target.textContent==questions[3].answer ){
+        score+=5;
+        correct.textContent="Correct!";
+    }else{
+        timer-=5;
+        correct.textContent="Nope"
+    }
+     
+     showQuestion()
+ 
+}); 
+
